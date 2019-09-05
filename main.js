@@ -105,3 +105,9 @@ function moref(param){
  moref(3)()()
 //  output is 8
 
+// passing function as parameter and returns fucntion * function by callback
+function xyz(abc){
+    return abc() * abc();
+    }
+xyz(function(){return 5})
+// output is 25
