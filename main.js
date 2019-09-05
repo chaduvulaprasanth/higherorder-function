@@ -67,6 +67,41 @@ function cbf (){
 
     paraf(cbf())
     // output is 6
-    
+ 
+// what if you are passing three funtions inside a functions
+function moref(){
+    return function gogo(){
+             return function(){
+                 return 5;
+             }
+    }
+ }
 
+ moref()
+//  output is 
+// ƒ gogo(){
+//     return function(){
+//         return 5;
+//     }
+// }
+
+moref()()
+// output is 
+// ƒ (){
+//     return 5;
+// }
+
+moref()()()
+// output is 5
+
+// what if we are passing a parameter along with returning 3 functions
+function moref(param){
+    return function gogo(){
+             return function(){
+                 return p+5;
+             }
+    }
+ }
+ moref(3)()()
+//  output is 8
 
