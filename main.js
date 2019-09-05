@@ -111,3 +111,22 @@ function xyz(abc){
     }
 xyz(function(){return 5})
 // output is 25
+
+// writing function which returns fucntion as that return function has if statement
+function bigger(){
+    return function(n){
+        if(n>5){
+            return "n is bigger";
+    }
+    }
+    }
+bigger()(7)    
+// output is "n is bigger"
+
+
+// passing ternary operator (if else)
+function bigger(n){
+    return (n > 5) ? "n is greater than 5" : "n is smaller than 5";
+}
+bigger(8)
+// output is "n is greater than 5"
